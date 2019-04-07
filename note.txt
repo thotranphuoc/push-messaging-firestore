@@ -1,2 +1,10 @@
 // install angularfire
 npm install firebase @angular/fire --save
+
+// send message via curl
+curl https://fcm.googleapis.com/fcm/send \
+     -H "Content-Type: application/json" \
+     -H "Authorization: key=AAAAefaCKzA:APA91bEAp3-SqPPGmtCEU7N-6DZAwTF0OhBfxG9Axtf9A4h4sS-kwB4dwqs026oM_OwKk4417O-e-2rrt5b3XrOi2JwDlrnC2MSnAhfBODANFIhHvO_4iTBRYDotGCdp_uoKpxlowu2r" \
+     -d '{ "notification": {"title": "Test title", "body": "Test Body", "click_action" : "https://angularfirebase.com"},"to" : "dNhxEZIno-s:APA91bFs7rhvaVLAsxzuxV-o-isV-85kwfYNn_G5ZQSPOmQbPk8AIX6cEHsl797P8Mbm_0asZn4t7CYHy7G-vvqB8Xg7c4VIz4Yw67zrL_1vuW5-0VClrUA4CiAImyOqGii23f5RB-TT"}'
+     
+curl https://fcm.googleapis.com/fcm/send  -H "Content-Type: application/json" -H "Authorization: key=AAAAefaCKzA:APA91bEAp3-SqPPGmtCEU7N-6DZAwTF0OhBfxG9Axtf9A4h4sS-kwB4dwqs026oM_OwKk4417O-e-2rrt5b3XrOi2JwDlrnC2MSnAhfBODANFIhHvO_4iTBRYDotGCdp_uoKpxlowu2r" -d '{ "notification": {"title": "Test title", "body": "Test Body", "click_action" : "https://angularfirebase.com"},"to" : "dNhxEZIno-s:APA91bFs7rhvaVLAsxzuxV-o-isV-85kwfYNn_G5ZQSPOmQbPk8AIX6cEHsl797P8Mbm_0asZn4t7CYHy7G-vvqB8Xg7c4VIz4Yw67zrL_1vuW5-0VClrUA4CiAImyOqGii23f5RB-TT"}'

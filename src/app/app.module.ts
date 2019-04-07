@@ -11,10 +11,12 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment'
 
 import { AppComponent } from './app.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,7 @@ import { AppComponent } from './app.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
